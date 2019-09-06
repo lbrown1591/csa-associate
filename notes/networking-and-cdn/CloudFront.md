@@ -21,4 +21,4 @@ Cloudfront is a content delivery network (CDN), meaning it's a collection of ser
 
 **Web Distributions**: Typically used for websites.
 
-**RTMP**: Used for media streaming.
+**RTMP**: Used for (Adobe Flash) media streaming.

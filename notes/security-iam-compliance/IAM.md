@@ -4,7 +4,7 @@
 
 ## Exam Tips / Summary
 
-- New users have no permissions when they are first created.
+- New users have **no permissions** when they are first created.
 - New users are assigned an **Access Key ID** and **Secret Access Key** when first created.
 - These are NOT the same as a password.
 - You can only view the secret access key once.
