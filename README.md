@@ -14,4 +14,4 @@ Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 - [CloudFront](notes/networking-and-cdn/CloudFront.md)
 
 ### Migration and Transfer
-- [Snowball](notes/migration-and-transfer/Snowball.md)
+- [Snowball](notes/secondary/migration-and-transfer/Snowball.md)
