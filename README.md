@@ -1,6 +1,6 @@
 # CSA - Associate Notes
 
-A collection of notes for the AWS Certified Solutions Architect 2019 Associate exam.
+Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 
 ## Contents 
 
@@ -9,3 +9,9 @@ A collection of notes for the AWS Certified Solutions Architect 2019 Associate e
 
 ### Security | Identity and Access Management | Compliance
 - [Identity and Access Management (IAM)](notes/security-iam-compliance/IAM.md)
+
+### Networking | CDN
+- [CloudFront](notes/networking-and-cdn/CloudFront.md)
+
+### Migration and Transfer
+- [Snowball](notes/migration-and-transfer/Snowball.md)
