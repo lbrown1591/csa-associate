@@ -5,7 +5,7 @@ Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 ## Contents
 
 ### Compute
-- [EC2 - Elastic Compute Cloud](notes/compute/EC2.md)
+- [EC2 (Elastic Compute Cloud)](notes/compute/EC2.md)
 
 ### Storage
 - [S3 (Simple Storage Service)](notes/storage/S3.md)
