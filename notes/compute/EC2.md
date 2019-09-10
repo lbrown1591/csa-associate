@@ -58,6 +58,13 @@ EC2 is a web service providing resizable computing capacity in the cloud.
 - EBS volume size can be changed on the fly - size and storage type
 - EC2 volumes can be moved between availability zones - Snapshot => AMI => Launch in new AZ
     - Between regions: Snapshot => AMI => Copy to destination region => Launch in new region
+- Instance Store
+    - Ephemeral data that is deleted when instance is stopped
+    - If underlying host fails, data is lost
+- EBS-backed Instances
+    - Can be stopped and rebooted
+    - The above will fix underlying system issues (hypervisor issues)
+    - You can tell AWS to keep EBS ROOT volumes on termination
 
 ## Pricing Models
 
@@ -99,3 +106,79 @@ Physical EC2 server dedicated to your use, useful for strict license conditions.
 - Great for licensing that doesn't support multi-tenancy or cloud deployments
 - Can be purchased on-demand (hourly)
 - Can be purchased as a reservation for up to 70% off the on-demand pricing
+
+## Security Groups
+
+These control inbound and outbound network access to an EC2 instance.
+
+- Changes are immediate
+- All inbound blocked by default
+- All outbound allowed
+- Any number of instances can be tied to a security group
+- Multiple security groups can be applied to EC2 instances
+- Security groups are stateful (if you create an inbound rule, that traffic is also allowed out)
+- You cannot block specific IPs, instead use NACLs
+- You can specify 'allow' rules, but not 'deny' rules
+
+## EBS (Elastic Block Store)
+
+EBS provides persistent block storage volumes for use with EC2.
+
+- Each EBS volume is replicated within its AZ to protect from component failure
+- Will be in the same AZ as the attached EC2 machine
+- Types:
+    - General Purpose (SSD)
+        - API name: gp2
+        - Max IOPS/volume: 16,000
+    - Provisioned IOPS (SSD)
+        - API name: io1
+        - Max IOPS/volume: 64,000
+    - Throughput Optimised HDD
+        - API name: st1
+        - Max IOPS/volume: 500
+    - Cold Hard Disk Drive
+        - API name: sc1
+        - Max IOPS/volume: 250
+    - Magnetic
+        - API name: Standard
+        - Max IOPS/volume: 40-200
+
+## Volumes vs. Snapshots
+
+### Volumes
+- Exist on EBS
+- To encrypt a ROOT volume after creation:
+    - Create snapshot
+    - Copy snapshot, and check 'Encrypt this Snapshot'
+    - Create an image from the encrypted snapshot
+
+### Snapshots
+- Exist on S3
+- Point in time copies of volumes
+- Incremental - only blocks that have changed will be stored
+- First snapshot may take time to create
+- Snapshots of root volumes should be done while instance is stopped for data consistency, but can be done while running
+
+## Amazon Machine Images (AMIs)
+
+You can select your AMI based on:
+
+- Region
+- OS
+- Architecture (32/64-bit)
+- Launch Permissions
+- Storage for the Root Device (Root Device Volume)
+    - Instance Store (EPHEMERAL STORAGE)
+    - EBS-backed volumes
+    - All AMIs are one of these
+
+### Types
+
+EBS
+- Root device is an Amazon EBS volume based on an Amazon EBS snapshot
+- If there are 'System Status Check' issues, they can be resolved by stopping and starting
+    - This starts the machine under a new hypervisor
+    - You CANNOT do this on an Instance Store backed machine
+
+Instance Store:
+- Root device is an instance store volume created from a template stored in S3
