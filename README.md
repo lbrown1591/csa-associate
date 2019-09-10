@@ -18,3 +18,6 @@ Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 
 ### Migration and Transfer
 - [Snowball](notes/secondary/migration-and-transfer/Snowball.md)
+
+### Monitoring
+- [CloudWatch](notes/monitoring/CloudWatch.md)

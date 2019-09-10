@@ -143,7 +143,7 @@ EBS provides persistent block storage volumes for use with EC2.
         - API name: Standard
         - Max IOPS/volume: 40-200
 
-## Volumes vs. Snapshots
+## Volumes and Snapshots
 
 ### Volumes
 - Exist on EBS
@@ -151,6 +151,8 @@ EBS provides persistent block storage volumes for use with EC2.
     - Create snapshot
     - Copy snapshot, and check 'Encrypt this Snapshot'
     - Create an image from the encrypted snapshot
+- Volumes restored from encrypted snapshots are encrypted automatically
+- You can encrypt ROOT device volumes upon creation of the EC2 instance
 
 ### Snapshots
 - Exist on S3
@@ -158,6 +160,9 @@ EBS provides persistent block storage volumes for use with EC2.
 - Incremental - only blocks that have changed will be stored
 - First snapshot may take time to create
 - Snapshots of root volumes should be done while instance is stopped for data consistency, but can be done while running
+- Snapshots of encrypted volumes are encrypted automatically
+- You can share snapshots only if they are unencrypted
+- These snapshots can be shared with other AWS accounts or made public
 
 ## Amazon Machine Images (AMIs)
 
