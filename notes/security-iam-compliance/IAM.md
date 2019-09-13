@@ -10,6 +10,10 @@
 - You can only view the secret access key once.
 - ALWAYS enable MFA on the root account.
 - You can customize password requirements and rotation/expiration policies.
+- Roles are more secure than storing credentials on EC2 instances.
+- Roles are easier to manage.
+- Roles are global.
+- Roles can be assigned to EC2 instances after creation using either the console or command line.
 
 ## What is it?
 
@@ -34,6 +38,8 @@ A global service (actions affect all regions, not just one) which allows you to 
 **Groups**: A collection of users. Users in a group will inherit the permissions of the group.
 
 **Roles**: Collections of policies which can be assigned to users, groups, and AWS resources.
+
+Roles can be attached to EC2 instances to allow access to various AWS resources.
 
 **Policies**: Made up of JSON documents, known as **policy documents**. They give permissions indicating what a user/role/group is able to do in AWS.
 

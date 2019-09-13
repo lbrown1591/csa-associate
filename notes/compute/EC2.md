@@ -65,6 +65,30 @@ EC2 is a web service providing resizable computing capacity in the cloud.
     - Can be stopped and rebooted
     - The above will fix underlying system issues (hypervisor issues)
     - You can tell AWS to keep EBS ROOT volumes on termination
+- The `User Data` field when launching an instance allows you to add a boostrap script beginning with `#!/bin/bash` that will run as root upon launch
+- Get instance metadata with curl http://169.254.169.254/latest/meta-data
+- Get instance user data with curl http://169.254.169.254/latest/user-data
+- Placement groups
+    - Clustered placement
+        - Low network latency, high network throughput
+    - Spread placement
+        - Individual critical instances (separate racks)
+    - Partitioned placement
+        - Similar to spread, but multiple instances per partition (clusters of instances on separate racks)
+
+## Placement Groups
+
+### Clustered
+
+A grouping of instances in a single AZ, that have low network latency, high network throughput, or both.
+
+### Spread
+
+A group of instances that will be on separate physical racks.
+
+### Partitioned
+
+Very similar to spread, but you can have multiple instances within a partition. Each partition is on a separate rack.
 
 ## Pricing Models
 
