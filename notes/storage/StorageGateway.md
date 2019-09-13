@@ -1,10 +1,10 @@
 # Storage Gateway
 
+[Back to Index](../../README.md)
+
 This is a service that connects an on-premis software appliance with cloud-based storage for cost and scalability.
 
 ## Exam Tips / Summary
-
-
 
 ## Installation
 
