@@ -69,12 +69,23 @@ EC2 is a web service providing resizable computing capacity in the cloud.
 - Get instance metadata with curl http://169.254.169.254/latest/meta-data
 - Get instance user data with curl http://169.254.169.254/latest/user-data
 - Placement groups
-    - Clustered placement
+    - Only certain types of instances can be launched in a placement group
+        - Compute optimized
+        - GPU
+        - Memory optimized
+        - Storage optimized
+    - AWS recommends homogenous instances within clustered placement groups
+    - You can't merge placement groups
+    - You can't move an existing instance directly into a placement group
+    - **Clustered placement**
         - Low network latency, high network throughput
-    - Spread placement
+        - Cannot span multiple AZs
+    - **Spread placement**
         - Individual critical instances (separate racks)
-    - Partitioned placement
+        - Can span multiple AZs
+    - **Partitioned placement**
         - Similar to spread, but multiple instances per partition (clusters of instances on separate racks)
+        - Can span multiple AZs
 
 ## Placement Groups
 
