@@ -2,6 +2,8 @@
 
 Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 
+Sources: AWS Documentation, [acloud.guru](https://acloud.guru)
+
 ## Contents
 
 ### Compute

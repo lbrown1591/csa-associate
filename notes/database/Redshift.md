@@ -95,6 +95,8 @@ NOTE: If you need a dist/sort key without high cardinality, normalization/denorm
 
 This is the query optimizer's sequential plan for executing your query.
 
+[Here are some AWS docs that are helpful in evaluating an explain plan.](https://docs.aws.amazon.com/redshift/latest/dg/c_data_redistribution.html)
+
 It can be used to identify problems and complex operations due to unoptimized table design.
 
 #### Good
@@ -167,6 +169,10 @@ When:
 [Amazon Redshift Engineering's Advanced Table Design Playbook](https://aws.amazon.com/blogs/big-data/amazon-redshift-engineerings-advanced-table-design-playbook-preamble-prerequisites-and-prioritization/)
 
 In-depth explanation of best practices when designing Redshift tables.
+
+[Evaluating an "Explain Plan" (AWS Docs)](https://docs.aws.amazon.com/redshift/latest/dg/c_data_redistribution.html)
+
+[Designing Tables (AWS Docs)](https://docs.aws.amazon.com/redshift/latest/dg/t_Creating_tables.html)
 
 [Amazon Redshift Utils](https://github.com/awslabs/amazon-redshift-utils)
 
