@@ -12,6 +12,9 @@ Notes for the AWS Certified Solutions Architect 2019 Associate exam.
 - [EFS: Elastic File System](notes/storage/EFS.md)
 - [Storage Gateway](notes/storage/StorageGateway.md)
 
+### Database
+- [Redshift](notes/database/Redshift.md)
+
 ### Security | Identity and Access Management | Compliance
 - [IAM: Identity and Access Management](notes/security-iam-compliance/IAM.md)
 
