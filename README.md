@@ -18,7 +18,7 @@ Sources: AWS Documentation, [acloud.guru](https://acloud.guru)
 - [Redshift](notes/database/Redshift.md)
 - [Aurora](notes/database/Aurora.md)
 - [DynamoDB](notes/database/DynamoDB.md)
-- [RDS](notes/database/RDS.md)
+- [RDS: Relational Database Service](notes/database/RDS.md)
 - [Elasticache](notes/database/Elasticache.md)
 
 ### Security | Identity and Access Management | Compliance

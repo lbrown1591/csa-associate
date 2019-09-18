@@ -30,6 +30,7 @@
     - MySQL, Oracle, SQL Server, PostgreSQL, MariaDB, Aurora
     - Uses AWS KMS
     - Once your RDS instance is encrypted, so are read replicas, backups, and snapshots
+- You can force failover in multi-AZ by rebooting the RDS instance
 
 ## Features
 
