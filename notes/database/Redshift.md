@@ -4,6 +4,33 @@
 
 ## Exam Tips / Summary
 
+- Single node: 160 G
+- Multi node: Leader node + up to 128 compute nodes
+- MPP: Massively Parallel Processing
+- You can scale out by adding more nodes to maintain query performance with growing data
+- Backups:
+    - Enabled by default with 1 day retention period
+    - Maximum retention period is 35 days
+    - Always attempts to maintain at least 3 copies of your data
+        - S3
+        - Original
+        - Backup/replica on compute nodes
+    - Can asynchronously replicate snapshots to S3 in another region
+- Pricing
+    - Compute node hours (1 unit per compute node per hour)
+    - Backups
+    - Data transfer
+- Encryption
+    - SSL
+    - AES-256 at rest
+    - By default takes care of key management
+        - You can manage your own through HSM
+        - AWS KMS
+- Availability
+    - Single AZ
+    - You can restore snapshots to new AZ
+- Used for BI
+
 ## What is it?
 
 Redshift is a fast, managed data warehouse which makes it simple and cost-effective to analyze data using SQL and existing BI tools. It can run complex analytical queries against petabytes of structured data, using query optimization, columnar storage, high-performance local disks, and massively parallel query execution.
