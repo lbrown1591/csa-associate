@@ -16,6 +16,9 @@ Sources: AWS Documentation, [acloud.guru](https://acloud.guru)
 
 ### Database
 - [Redshift](notes/database/Redshift.md)
+- [Aurora](notes/database/Aurora.md)
+- [DynamoDB](notes/database/DynamoDB.md)
+- [RDS](notes/database/RDS.md)
 
 ### Security | Identity and Access Management | Compliance
 - [IAM: Identity and Access Management](notes/security-iam-compliance/IAM.md)
