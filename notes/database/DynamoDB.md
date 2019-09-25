@@ -24,7 +24,7 @@ Great for mobile, web, gaming, ad-tech, IoT, and many other applications.
 
 - Stored on SSD
 - 3 geographically distinct data centers
-- Eventually consistent reads
+- Eventually consistent reads (default)
     - Usually within a second. Repeating a read after a short time should return updated data.
 - Strongly consistent reads (1 SECOND RULE!)
     - Will return a result reflecting all writes that have received a successful response prior to the read.

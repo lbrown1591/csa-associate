@@ -26,6 +26,8 @@ Sources: AWS Documentation, [acloud.guru](https://acloud.guru)
 
 ### Networking | CDN
 - [CloudFront](notes/networking-and-cdn/CloudFront.md)
+- [Route53](notes/networking-and-cdn/Route53.md)
+- [VPC](notes/networking-and-cdn/VPC.md)
 
 ### Migration and Transfer
 - [Snowball](notes/secondary/migration-and-transfer/Snowball.md)
